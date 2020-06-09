@@ -1,0 +1,19 @@
+footer{
+  position: fixed;
+ bottom: 0;
+ width: 100%
+
+}
+.footer ul li{
+  margin: 10px 20px 10px 20px;
+  left: 35%;
+  position: relative;
+}
+
+.footer ul{
+  padding-top: 10px; padding-bottom: 10px;
+  background-color: rgb(75, 75, 75);
+  color:#fff;
+  width: 100%
+
+}

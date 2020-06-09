@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/assets/nav.css">
+    <link rel="stylesheet" href="/assets/footer.css">
+    <link rel="stylesheet" href="/assets/styleEdit.css">
+  </head>
+  <body>
+    <% if (username){ %>
+      <% if(username === "rootuser") { %>
+      <% include partials/navRoot %>
+    <%  } else { %>
+          <% include partials/navUser  %>
+        <% } %>
+      <% } else { %>
+        <% include partials/nav  %>
+    <%  } %>
+
+    <div class="form">
+
+      <form class="" action="/edit/<%= employee.id%>" method="post" >
+        <input type="text" name="first_name" value="<%= employee.first_name%>" required>
+        <input type="text" name="second_name" value="<%= employee.second_name%>" required>
+        <input type="text" name="username" value="<%=employee.user_name%>" disabled>
+        <input type="password" name="password" value="<%=employee.user_password%>" required>
+        <input type="email" name="email" value="<%=employee.email%>" disabled>
+        <input type="submit"  value="Update">
+      </form>
+    </div>
+
+
+
+
+    </div>
+
+
+<% include partials/footer %>
+  </body>
+</html>

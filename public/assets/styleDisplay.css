@@ -1,0 +1,37 @@
+table {
+  text-align: center;
+margin: 0 auto;
+/* border: rgb(36, 149, 255) */
+}
+
+
+
+tbody td{
+  padding: 15px;
+  background-color: rgb(230, 254, 255)
+  /* border: rgb(36, 149, 255) */
+}
+
+thead td{
+  padding: 15px;
+  background-color: rgb(69, 69, 69);
+  color:#fff;
+  /* border: 0px; */
+  border: rgb(36, 149, 255)
+}
+
+.edit {
+  background-color: rgb(31, 159, 250);
+  color:white;
+  text-decoration: none;
+  padding: 8px 10px 5px 10px;
+  font-weight: 200
+}
+
+.delete {
+  background-color:rgb(245, 5, 78);
+  color:white;
+  text-decoration: none;
+  padding: 8px 10px 5px 10px;
+  font-weight: 200
+}

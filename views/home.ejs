@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>  <%=title%>  </title>
+    <link rel="stylesheet" href="/assets/styleHome.css">
+    <link rel="stylesheet" href="/assets/nav.css">
+    <link rel="stylesheet" href="/assets/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+<% if (username){ %>
+  <% if(username === "rootuser") { %>
+  <% include partials/navRoot %>
+<%  } else { %>
+      <% include partials/navUser  %>
+    <% } %>
+  <% } else { %>
+    <% include partials/nav  %>
+<%  } %>
+
+
+      <div class="section-1">
+        <img class="first" src="/assets/top.png" alt="">
+        <img class="second" src="/assets/new.png" alt="none">
+        <p>Get Hired</p>
+      </div>
+
+      <div class="right-side">
+         <% if (username) { %>
+        <h2>Welcome Back <span style="color:red"><%= username %> </span> !</h2>
+      <%} %>
+        <h2>A Large community of skilled developers. Be one of them and get involved Now.</h2>
+        <button type="button" name="button"> <a href="/signup"> Join Us Now  </a> </button>
+      </div>
+
+      <div class="current-count">
+        <h2 class="counter">The company has currently : <span style="color:red;font-weight:bold"><%=count%> </span> Employees. </h2>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+    <% include partials/footer %>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/assets/nav.css">
+    <link rel="stylesheet" href="/assets/footer.css">
+    <link rel="stylesheet" href="/assets/styleDisplay.css">
+  </head>
+  <body>
+    <% if (username){ %>
+      <% if(username === "rootuser") { %>
+      <% include partials/navRoot %>
+    <%  } else { %>
+          <% include partials/navUser  %>
+        <% } %>
+      <% } else { %>
+        <% include partials/nav  %>
+    <%  } %>
+<br><br>
+    <table>
+      <thead>
+
+      <tr class="head">
+        <td >ID</td>
+        <td >First Name</td>
+        <td >Second Name</td>
+        <td>User Name</td>
+        <td>Password</td>
+        <td>Email</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+
+    </thead>
+      <tbody class="body">
+
+      <%  for(i = 0  ; i<employee.length  ; i++){ %>
+
+        <tr>
+          <td><strong style="color:red"> <%= employee[i].id%></strong>  </td>
+          <td><%= employee[i].first_name %></td>
+          <td><%= employee[i].second_name%></td>
+          <td><%= employee[i].user_name%></td>
+          <td><%= employee[i].user_password%></td>
+          <td><%= employee[i].email%></td>
+          <td> <a class="edit" href="/edit/<%=employee[i].id%>" >  EDIT </a> </td>
+          <td> <a class="delete" href="/delete/<%=employee[i].id%>">DELETE</a> </td>
+
+        </tr>
+<% } %>
+      </tbody>
+
+
+    </table>
+    <br><br><br><br>
+
+
+
+
+
+
+
+<% include  partials/footer %>
+  </body>
+</html>

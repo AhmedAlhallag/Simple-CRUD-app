@@ -1,0 +1,47 @@
+*{
+  font-family:helvetica ;
+}
+html ,  body {
+padding: 0 ;
+margin: 0
+
+}
+ul {
+list-style: none;
+margin: 0 ;
+padding: 0;
+overflow: hidden;
+background-color: rgb(247, 247, 247);
+padding-top: 20px;
+padding-bottom: 10px
+
+}
+
+li {
+float: left;}
+
+a{
+  text-decoration: none;
+  margin: 10px;
+}
+.logo{
+  font-family: "Avenir Next LT Pro";
+  font-weight: 600;
+  padding-right:15px;
+  padding-left: 40px;
+  font-size:27px;
+  position: relative;
+  top:-6px
+}
+
+.logo-text , .a-text{
+  color:DodgerBlue;
+}
+
+.most-left, .left{
+  float: right;
+}
+
+.most-left{
+  padding-right: 50px
+}
